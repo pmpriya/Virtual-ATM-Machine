@@ -7,7 +7,7 @@ public class ATM extends OptionMenu {
         // connection - mysql
         try {
             ATM.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atm", "root", "Admin@123");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/atm", "root", "//enter password");
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from atm_table where username=" + username + ", password=" + password + ";");
 
